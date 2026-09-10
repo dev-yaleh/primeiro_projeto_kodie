@@ -1,0 +1,162 @@
+/*
+ * style.css
+ * Estilos para a página de HTML Semântico.
+ */
+
+ /* Configuração geral da página */
+
+ *{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+        /* Define a cor de fundo principal */
+    background-color: #F4F7FB;
+
+    /* Define a fonte utilizada pelos textos */
+    font-family: "Elms Sans", sans-serif;
+
+    /* Define a cor padrão do texto */
+    color: #687280;
+ }
+
+/* Estilização do conteúdo principal */
+main {
+    /* Adiciona espaçamento interno ao conteúdo */
+    padding: 40px 20px;
+
+    /* Define uma largura confortável para leitura */
+    max-width: 1200px;
+
+    /* Centraliza o conteúdo horizontalmente */
+    margin: 0 auto;
+}
+
+/* Título principal da página */
+h1 {
+    /* Utiliza Poppins nos títulos */
+    font-family: "Poppins", sans-serif;
+
+    /* Define a cor dos títulos */
+    color: #2563EB;
+
+    /* Centraliza o título */
+    text-align: center;
+
+    /* Cria espaço abaixo do título */
+    margin-bottom: 40px;
+}
+
+/* 
+ * Parágrafo introdutório da página.
+ * Fornece uma breve explicação sobre o conteúdo.
+ */
+p{
+        /* Utiliza Poppins nos títulos */
+    font-family: "Poppins", sans-serif;
+
+    /* Centraliza o título */
+    text-align: center;
+
+    /* Cria espaço abaixo do título */
+    margin-bottom: 20px;
+}
+
+/*
+ * Container dos cards.
+ * O Flexbox organiza os artigos lado a lado.
+ */
+section {
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Permite que os cards quebrem linha em telas menores */
+    flex-wrap: wrap;
+
+    /* Cria espaçamento entre os cards */
+    gap: 24px;
+
+    /* Distribui os cards de forma equilibrada */
+    justify-content: between;
+}
+
+section > h2 {
+  flex-basis: 100%;   /* força o título a ocupar a linha inteira */
+  margin-bottom: 20px; /* espaço abaixo do título */
+  text-align: center;  /* centraliza o título */
+}
+
+
+/* Cada article representa um card */
+article {
+    /* Define o fundo branco dos cards */
+    background-color: #FFFFFF;
+
+    /* Adiciona uma borda aos cards */
+    border: 1px solid #D1D5DB;
+
+    /* Arredonda levemente os cantos */
+    border-radius: 10px;
+
+    /* Adiciona preenchimento interno */
+    padding: 16px;
+
+    /*
+     * Faz o card ocupar espaço proporcional dentro do container,
+     * mantendo os três cards lado a lado quando houver espaço.
+     */
+    flex: 1 1 200px;
+
+    /* Garante que padding e borda façam parte do tamanho do elemento */
+    box-sizing: border-box;
+}
+
+/* Títulos dos cards */
+article h2 {
+    /* Utiliza Poppins para os títulos */
+    font-family: "Poppins", sans-serif;
+
+    /* Define a cor dos títulos */
+    color: #2563EB;
+
+    /* Remove margem superior desnecessária */
+    margin-top: 0;
+
+    /* Centraliza o título */
+    text-align: center;
+
+    /* Adiciona espaço abaixo do título */
+    margin-bottom: 12px;
+}
+
+/* Parágrafos dos cards */
+article p {
+    /* Define a fonte dos textos */
+    font-family: "Elms Sans", sans-serif;
+
+    /* Define a cor do texto principal */
+    color: #687280;
+
+    /* Melhora a legibilidade do texto */
+    line-height: 1.6;
+
+    /* Remove margem inferior padrão */
+    margin-bottom: 0;
+
+    /* Centraliza o texto */
+    text-align: center;
+}
+
+/*
+ * Destaque visual ao passar o mouse sobre um card.
+ * A propriedade transition suaviza a mudança.
+ */
+article:hover {
+    /* Destaca a borda com a cor de destaque */
+    border-color: #7C3AED;
+
+    /* Cria uma pequena elevação visual */
+    transform: translateY(-4px);
+
+    /* Suaviza a animação */
+    transition: 0.2s ease;
+}
